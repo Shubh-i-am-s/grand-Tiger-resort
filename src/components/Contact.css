@@ -1,0 +1,246 @@
+.contact-section {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.contact-grid-main {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .contact-grid-main {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.contact-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.info-cards-stack-luxury {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 1.75rem 2rem;
+  text-align: left;
+}
+
+.card-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(184, 147, 85, 0.08);
+  border: 1.5px solid rgba(184, 147, 85, 0.15);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-card h4 {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.contact-info-card p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+
+.contact-info-card span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.contact-phone-num,
+.contact-email-txt {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary) !important;
+}
+
+/* Custom Styled Map */
+.interactive-map-block {
+  height: 300px;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  background-color: #0b1f16; /* Deep forest green */
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1.5px, transparent 1.5px);
+  background-size: 25px 25px, 50px 50px, 50px 50px;
+}
+
+.map-vector-canvas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+}
+
+.map-beacon-pulse {
+  width: 14px;
+  height: 14px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.map-beacon-pulse::after {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: -13px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2.5px solid var(--accent);
+  opacity: 0;
+  animation: pulseGlowMap 2.2s infinite;
+}
+
+@keyframes pulseGlowMap {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { opacity: 0.65; }
+  100% { transform: scale(1.1); opacity: 0; }
+}
+
+.map-location-tag {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  background-color: rgba(10, 13, 11, 0.85);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8125rem;
+  margin-bottom: 1.5rem;
+}
+
+.map-location-tag strong {
+  color: var(--accent);
+}
+
+.map-location-tag span {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.map-indicator-compass {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.map-view-btn {
+  color: var(--text-light);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.map-view-btn:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary) !important;
+  color: var(--text-light);
+}
+
+/* Form Container Panel */
+.contact-form-container {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 480px) {
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+}
+
+.contact-inquiry-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-heading-title {
+  font-size: 1.85rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.contact-send-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Success layout */
+.form-success-box {
+  flex-direction: column;
+  text-align: center;
+  min-height: 360px;
+}
+
+.success-check-ring-box {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: rgba(184, 147, 85, 0.12);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-success-box h3 {
+  font-size: 1.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-success-box p {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 320px;
+}

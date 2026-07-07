@@ -1,0 +1,542 @@
+.booking-section {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.wizard-container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 4rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+@media (max-width: 768px) {
+  .wizard-container {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* Step progress */
+.wizard-step-progress-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.progress-ind-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 90px;
+}
+
+.step-badge-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: var(--transition-smooth);
+}
+
+.step-badge-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.progress-ind-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--border-color);
+  margin: 0 1.25rem;
+  min-width: 25px;
+}
+
+.progress-ind-block.active .step-badge-num {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--text-light);
+}
+
+.progress-ind-block.active .step-badge-label {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.progress-ind-block.done .step-badge-num,
+.progress-ind-line.done {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--text-light);
+}
+
+/* Wiz body */
+.wiz-step-body {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.wiz-inputs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.wiz-inputs-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .wiz-inputs-row,
+  .wiz-inputs-grid-two {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--text-main);
+  transition: var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(15, 44, 30, 0.06);
+}
+
+.wiz-section-subtitle-tag {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.wiz-rooms-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 900px) {
+  .wiz-rooms-picker-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .wiz-rooms-picker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wiz-room-option-card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  transition: var(--transition-smooth);
+}
+
+.wiz-room-option-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--secondary);
+}
+
+.wiz-room-option-card.selected {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  background-color: rgba(184, 147, 85, 0.04);
+}
+
+.wiz-option-img {
+  position: relative;
+  height: 120px;
+}
+
+.wiz-option-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wiz-option-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wiz-option-info {
+  padding: 1rem;
+}
+
+.wiz-option-info h4 {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.wiz-option-info span {
+  font-size: 0.75rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* Actions footer */
+.wiz-actions-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+.room-availability-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.dot-blink {
+  width: 8px;
+  height: 8px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: block;
+  animation: blinkDot 1.5s infinite;
+}
+
+@keyframes blinkDot {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+/* Stay Summary */
+.wiz-billing-summary-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .wiz-billing-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.wiz-stay-summary {
+  background-color: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wiz-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--bg-secondary);
+  padding-bottom: 0.65rem;
+}
+
+.wiz-summary-row span {
+  color: var(--text-muted);
+}
+
+.wiz-summary-row strong {
+  color: var(--primary);
+}
+
+.wiz-invoice-summary {
+  background-color: var(--primary) !important;
+  color: var(--text-light);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+}
+
+.wiz-invoice-summary h4 {
+  color: var(--accent);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.wiz-invoice-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+.total-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.wiz-invoice-note {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2rem;
+  line-height: 1.4;
+}
+
+/* Success Voucher */
+.success-body {
+  flex-direction: column;
+  text-align: center;
+}
+
+.success-icon-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: rgba(184, 147, 85, 0.12);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.success-body h3 {
+  font-size: 1.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.success-body p {
+  font-size: 0.875rem;
+  max-width: 480px;
+  margin-bottom: 3rem;
+}
+
+/* Printable Voucher Card */
+.reservation-voucher {
+  width: 100%;
+  max-width: 680px;
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-bottom: 3.5rem;
+  text-align: left;
+}
+
+.voucher-head {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.voucher-head h4 {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.voucher-head p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.6875rem;
+}
+
+.voucher-id-block {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.voucher-id-block span {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.voucher-id-block strong {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+}
+
+.voucher-main {
+  padding: 2.5rem;
+}
+
+.voucher-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .voucher-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.voucher-details-grid span,
+.voucher-remarks-box span,
+.voucher-bottom-price span {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.voucher-details-grid h5 {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.voucher-remarks-box {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.voucher-remarks-box p {
+  font-size: 0.8125rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.voucher-bottom-price {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.voucher-bottom-price h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.voucher-bottom-price h3 small {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.voucher-stamp-box {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-4deg);
+}
+
+.voucher-stamp-box span {
+  font-size: 0.55rem;
+  margin-bottom: 0;
+}
+
+.voucher-stamp-box strong {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.voucher-actions-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Print vouchers */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resort-voucher-doc, #resort-voucher-doc * {
+    visibility: visible;
+  }
+  #resort-voucher-doc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+}

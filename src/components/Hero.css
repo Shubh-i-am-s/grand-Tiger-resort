@@ -1,0 +1,240 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--text-light);
+}
+
+.hero-slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: left;
+}
+
+.hero-subtitle-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero-headline {
+  color: var(--text-light);
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6.2vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-description {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2.75rem;
+  line-height: 1.65;
+  max-width: 650px;
+}
+
+.hero-buttons-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hero-sec-btn {
+  color: var(--text-light) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.hero-sec-btn:hover {
+  background-color: var(--text-light) !important;
+  color: var(--primary) !important;
+}
+
+/* Availability panel overlay */
+.hero-booking-panel-wrapper {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1050px;
+  z-index: 10;
+}
+
+.hero-booking-panel {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr 1.2fr;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  background: rgba(10, 13, 11, 0.6) !important; /* Fallback obsidian glass */
+}
+
+@media (max-width: 900px) {
+  .hero-booking-panel-wrapper {
+    bottom: 30px;
+  }
+  .hero-booking-panel {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+  .hero-input-divider {
+    display: none;
+  }
+}
+
+.hero-input-field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-label-icon {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hero-input-field input,
+.hero-input-field select {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-light);
+  width: 100%;
+}
+
+.hero-input-field input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.hero-input-field select option {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+.hero-input-divider {
+  width: 1px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0 1.75rem;
+}
+
+.hero-booking-submit {
+  height: 100%;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--text-light);
+}
+
+.hero-booking-submit:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Mouse Scroll Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 160px;
+  right: 5%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.7;
+  transition: var(--transition-fast);
+}
+
+@media (max-width: 1100px) {
+  .hero-scroll-indicator {
+    display: none;
+  }
+}
+
+.hero-scroll-indicator:hover {
+  opacity: 1;
+}
+
+.mouse-wheel-track {
+  width: 22px;
+  height: 36px;
+  border: 1.5px solid var(--text-light);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.mouse-wheel-dot {
+  width: 3px;
+  height: 6px;
+  background-color: var(--text-light);
+  border-radius: 50%;
+  animation: floatDot 1.5s infinite;
+}
+
+.arrow-down-head {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--text-light);
+  border-bottom: 1.5px solid var(--text-light);
+  transform: rotate(45deg);
+  animation: bounceArrow 1.5s infinite;
+}
+
+@keyframes floatDot {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(6px); opacity: 0.3; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(4px) rotate(45deg); }
+}
