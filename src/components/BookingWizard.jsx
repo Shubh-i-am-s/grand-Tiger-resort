@@ -311,12 +311,30 @@ export default function BookingWizard({ initialData = {} }) {
                 </div>
               </div>
 
+              <div className="wiz-payment-mock-container" style={{ marginTop: '2.5rem' }}>
+                <h4 className="wiz-section-subtitle-tag text-center" style={{ marginBottom: '1.5rem', borderBottom: 'none' }}>Select Payment Method</h4>
+                <div className="payment-methods-grid">
+                  <div className="payment-method-card clickable" onClick={handleConfirmReservation}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" alt="Google Pay" className="pay-logo" />
+                    <span>Pay via GPay</span>
+                  </div>
+                  <div className="payment-method-card clickable" onClick={handleConfirmReservation}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/PhonePe_Logo.svg" alt="PhonePe" className="pay-logo" />
+                    <span>Pay via PhonePe</span>
+                  </div>
+                  <div className="payment-method-card clickable" onClick={handleConfirmReservation}>
+                    <div className="pay-card-icon">💳</div>
+                    <span>Credit/Debit Card</span>
+                  </div>
+                </div>
+                <p className="wiz-invoice-note text-center" style={{ marginTop: '1.25rem' }}>
+                  * Mock transaction. Selecting any payment method will generate a confirmed voucher.
+                </p>
+              </div>
+
               <div className="wiz-actions-footer">
                 <button type="button" className="btn btn-outline clickable" onClick={handlePrevStep}>
                   Back
-                </button>
-                <button type="button" className="btn btn-primary clickable" onClick={handleConfirmReservation}>
-                  Confirm & Lock Room
                 </button>
               </div>
             </div>

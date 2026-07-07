@@ -83,8 +83,12 @@
 }
 
 .hero-sec-btn:hover {
-  background-color: var(--text-light) !important;
+  background-color: transparent !important;
   color: var(--primary) !important;
+}
+
+.hero-sec-btn::before {
+  background-color: var(--text-light) !important;
 }
 
 /* Availability panel overlay */

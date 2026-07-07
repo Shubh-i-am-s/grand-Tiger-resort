@@ -348,7 +348,9 @@
 
 /* Success Voucher */
 .success-body {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -538,5 +540,57 @@
     width: 100%;
     border: none;
     box-shadow: none;
+  }
+}
+
+/* Payment Mock Styles */
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.payment-method-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.payment-method-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--secondary);
+  background-color: rgba(184, 147, 85, 0.05);
+}
+
+.pay-logo {
+  height: 28px;
+  object-fit: contain;
+}
+
+.pay-card-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.payment-method-card span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  .payment-methods-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }

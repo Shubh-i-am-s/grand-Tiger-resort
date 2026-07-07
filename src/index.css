@@ -139,6 +139,21 @@ img {
   display: block;
 }
 
+/* Global Form Resets */
+input, select, textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  color: inherit;
+  padding: 0.85rem 1rem;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
 /* Glassmorphism System Utility */
 .glass-panel {
   background: var(--glass-bg);

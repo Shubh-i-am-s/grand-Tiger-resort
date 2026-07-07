@@ -45,16 +45,16 @@ export default function Hero({ onSearchBooking }) {
   return (
     <section id="home" className="hero-section">
       {/* Background slide transitions */}
-      <div className="hero-slides">
-        <AnimatePresence mode="wait">
+      <div className="hero-slides" style={{ backgroundColor: '#000' }}>
+        <AnimatePresence>
           <motion.div
             key={current}
             className="hero-slide-bg"
             style={{ backgroundImage: `linear-gradient(rgba(10, 13, 11, 0.45), rgba(10, 13, 11, 0.45)), url(${slides[current].image})` }}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
           />
         </AnimatePresence>
       </div>

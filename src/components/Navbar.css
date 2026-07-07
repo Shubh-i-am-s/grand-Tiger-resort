@@ -8,25 +8,20 @@
   display: flex;
   align-items: center;
   transition: var(--transition-smooth);
-  background-color: rgba(251, 250, 247, 0.05);
-  border-bottom: 1px solid rgba(184, 147, 85, 0.05);
-}
-
-.navbar.scrolled {
-  background-color: rgba(251, 250, 247, 0.85) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  height: 75px;
-  box-shadow: var(--shadow-sm);
+  background-color: var(--bg-primary);
   border-bottom: 1px solid var(--border-color);
 }
 
+.navbar.scrolled {
+  height: 75px;
+  box-shadow: var(--shadow-sm);
+}
+
 :root[data-theme="dark"] .navbar {
-  background-color: rgba(10, 13, 11, 0.05);
+  background-color: var(--bg-primary);
 }
 
 :root[data-theme="dark"] .navbar.scrolled {
-  background-color: rgba(10, 13, 11, 0.85) !important;
   border-bottom: 1px solid var(--border-color);
 }
 

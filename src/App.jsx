@@ -7,7 +7,6 @@ import Gallery from './components/Gallery';
 import Dining from './components/Dining';
 import Amenities from './components/Amenities';
 import Experiences from './components/Experiences';
-import VirtualTour from './components/VirtualTour';
 import SpecialOffers from './components/SpecialOffers';
 import BookingWizard from './components/BookingWizard';
 import Reviews from './components/Reviews';
@@ -64,7 +63,6 @@ export default function App() {
       <Dining />
       <Amenities />
       <Experiences />
-      <VirtualTour />
       <SpecialOffers />
       <BookingWizard initialData={bookingData} />
       <Reviews />
