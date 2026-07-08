@@ -128,7 +128,7 @@ export default function Footer() {
               Near Mukki Gate, Village: Manjitola, Kanha National Park, Baihar, District: Balaghat, Madhya Pradesh 481111, India
             </p>
             <p className="footer-contact-row">
-              <strong>Phone:</strong> +91 9407098996
+              <strong>Phone:</strong> +91 88895 02888
             </p>
             <p className="footer-contact-row">
               <strong>Email:</strong> grandtigerresort@gmail.com

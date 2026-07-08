@@ -121,7 +121,7 @@ export default function FloatingUI() {
       <div className="floating-action-controls">
         {/* WhatsApp Button */}
         <a 
-          href="https://wa.me/919407098996?text=Hello%20Grand%20Tiger%20Resort,%20I'd%20like%20to%20inquire%20about%20staying%20packages."
+          href="https://wa.me/918889502888?text=Hello%20Grand%20Tiger%20Resort,%20I'd%20like%20to%20inquire%20about%20staying%20packages."
           target="_blank" 
           rel="noopener noreferrer"
           className="floating-btn whatsapp-btn glass-panel"

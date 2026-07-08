@@ -57,7 +57,7 @@ export default function Contact() {
                 <div className="card-icon-box"><PhoneCall size={20} /></div>
                 <div>
                   <h4>24/7 Hotline Desk</h4>
-                  <p className="contact-phone-num">+91 94070 98996</p>
+                  <p className="contact-phone-num">+91 88895 02888</p>
                   <span>Connect with our reception desk instantly</span>
                 </div>
               </div>
