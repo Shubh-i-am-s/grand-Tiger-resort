@@ -48,7 +48,7 @@ export default function Contact() {
                 <div className="card-icon-box"><MapPin size={20} /></div>
                 <div>
                   <h4>Sanctuary Address</h4>
-                  <p>Chandigarh-Dharamshala Road, Dhaliara, Tehsil Dehra, Kangra, Himachal Pradesh - 177103</p>
+                  <p>Near Mukki Gate, Village: Manjitola, Kanha National Park, Baihar, District: Balaghat, Madhya Pradesh 481111, India</p>
                 </div>
               </div>
 
@@ -57,7 +57,7 @@ export default function Contact() {
                 <div className="card-icon-box"><PhoneCall size={20} /></div>
                 <div>
                   <h4>24/7 Hotline Desk</h4>
-                  <p className="contact-phone-num">+91 94181 03888</p>
+                  <p className="contact-phone-num">+91 88895 02888</p>
                   <span>Connect with our reception desk instantly</span>
                 </div>
               </div>
@@ -67,7 +67,7 @@ export default function Contact() {
                 <div className="card-icon-box"><Mail size={20} /></div>
                 <div>
                   <h4>Email Desk</h4>
-                  <p className="contact-email-txt">reservations@deejayresort.com</p>
+                  <p className="contact-email-txt">grandtigerresort@gmail.com</p>
                   <span>Replies guaranteed within 2 hours</span>
                 </div>
               </div>
@@ -78,12 +78,12 @@ export default function Contact() {
               <div className="map-vector-canvas">
                 <div className="map-beacon-pulse"></div>
                 <div className="map-location-tag">
-                  <strong>Dee Jay Resort</strong>
-                  <span>Dhaliara Highway</span>
+                  <strong>Grand Tiger Resort</strong>
+                  <span>Mukki Gate, Kanha</span>
                 </div>
                 <div className="map-indicator-compass">N</div>
                 <a 
-                  href="https://maps.google.com/?q=Dee+Jay+Resort+Dhaliara+Himachal+Pradesh" 
+                  href="https://maps.google.com/?q=Grand+Tiger+Resort+Kanha+National+Park" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn btn-outline map-view-btn clickable"

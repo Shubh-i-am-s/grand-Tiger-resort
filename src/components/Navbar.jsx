@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Moon, Sun, Menu, X, ArrowRight } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar({ onBookClick }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [theme, setTheme] = useState(document.documentElement.getAttribute('data-theme') || 'light');
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,14 +29,13 @@ export default function Navbar({ onBookClick }) {
   };
 
   const menuItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Accommodations', href: '#rooms' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Dining', href: '#dining' },
-    { label: 'Experiences', href: '#experiences' },
-    { label: 'Attractions', href: '#attractions' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Discover Kanha', href: '/discover-kanha' },
+    { label: 'Rooms', href: '/rooms' },
+    { label: 'Amenities', href: '/amenities' },
+    { label: 'Tariff', href: '/tariff' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -47,18 +48,24 @@ export default function Navbar({ onBookClick }) {
       >
         <div className="navbar-container">
           {/* Logo */}
-          <a href="#home" className="nav-logo">
-            <span className="logo-main">DEE JAY</span>
-            <span className="logo-sub">RESORT</span>
-          </a>
+          <Link to="/" className="nav-logo">
+            <img src="http://www.grandtigerresort.com/images/main-logo.png" alt="Grand Tiger Resort Logo" className="logo-img" />
+            <div className="logo-text-wrapper">
+              <span className="logo-main">GRAND TIGER</span>
+              <span className="logo-sub">RESORT KANHA</span>
+            </div>
+          </Link>
 
           {/* Desktop Nav Items */}
           <ul className="nav-menu">
             {menuItems.map((item, idx) => (
               <li key={idx} className="nav-item">
-                <a href={item.href} className="nav-link">
+                <Link 
+                  to={item.href} 
+                  className={`nav-link ${location.pathname === item.href ? 'active' : ''}`}
+                >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -106,13 +113,13 @@ export default function Navbar({ onBookClick }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.05 }}
                 >
-                  <a 
-                    href={item.href} 
+                  <Link 
+                    to={item.href} 
                     className="mobile-nav-link"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
               <li className="mobile-nav-item drawer-cta">

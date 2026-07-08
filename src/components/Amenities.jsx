@@ -1,81 +1,67 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Waves, Flower2, Utensils, Dumbbell, Baby, Users2, Gem, Flame, Wifi, Car, ArrowUpRight } from 'lucide-react';
+import { Waves, Flower2, Utensils, Dumbbell, Baby, Users2, Gem, Flame, Wifi, Car, ArrowUpRight, Wind } from 'lucide-react';
 import './Amenities.css';
 
 const amenitiesData = [
   {
-    id: "pool",
-    icon: <Waves size={24} />,
-    title: "Infinity Sky Pool",
-    desc: "Heated plunge pool framed by panoramic peaks of the Dhauladhars.",
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80",
+    id: "safari",
+    icon: <Car size={24} />,
+    title: "Jungle Safari Booking",
+    desc: "Seamless booking for Kanha core and buffer zones with expert naturalists.",
+    image: "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=800&q=80",
     className: "bento-large"
   },
   {
-    id: "spa",
-    icon: <Flower2 size={24} />,
-    title: "Himalayan Spa",
-    desc: "Therapeutic wellness massages using custom oils, cedar wood scents, and herbs.",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+    id: "pool",
+    icon: <Waves size={24} />,
+    title: "Swimming Pool",
+    desc: "Relaxing outdoor pool surrounded by lush jungle greenery.",
+    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
     className: "bento-medium"
   },
   {
     id: "dining",
     icon: <Utensils size={24} />,
-    title: "Fine Dining",
-    desc: "Exquisite multi-cuisine plates prepared by master chefs under local wooden carvings.",
+    title: "Multi-Cuisine Restaurant",
+    desc: "Serving Indian, Continental, and authentic local tribal delicacies.",
     image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80",
     className: "bento-medium"
   },
   {
-    id: "gym",
-    icon: <Dumbbell size={24} />,
-    title: "Modern Gym",
-    desc: "Fully equipped athletic center.",
-    className: "bento-small"
-  },
-  {
-    id: "kids",
-    icon: <Baby size={24} />,
-    title: "Kids Zone",
-    desc: "Monitored luxury indoor playroom.",
-    className: "bento-small"
-  },
-  {
-    id: "wedding",
-    icon: <Gem size={24} />,
-    title: "Wedding Venue",
-    desc: "Cinematic outdoor garden settings.",
-    className: "bento-small"
-  },
-  {
-    id: "conference",
-    icon: <Users2 size={24} />,
-    title: "Conference Hall",
-    desc: "State-of-the-art corporate event spaces.",
-    className: "bento-small"
-  },
-  {
     id: "bonfire",
     icon: <Flame size={24} />,
-    title: "Bonfire Lounge",
-    desc: "Outdoor stone firepits overlooking mountain paths under the starry night.",
-    className: "bento-wide"
+    title: "Night Bonfires",
+    desc: "Warm up and share safari stories.",
+    className: "bento-small"
+  },
+  {
+    id: "ev",
+    icon: <Car size={24} />,
+    title: "EV Charging",
+    desc: "Dedicated charging station.",
+    className: "bento-small"
   },
   {
     id: "wifi",
     icon: <Wifi size={24} />,
-    title: "Gigabit Wi-Fi",
-    desc: "High-speed coverage everywhere.",
+    title: "Free Wi-Fi",
+    desc: "High-speed internet access.",
     className: "bento-small"
   },
   {
     id: "parking",
     icon: <Car size={24} />,
-    title: "Secure Valet",
-    desc: "Round-the-clock vehicle protection.",
+    title: "Free Parking",
+    desc: "Safe and secure vehicle parking.",
     className: "bento-small"
+  },
+  {
+    id: "ac",
+    icon: <Wind size={24} />,
+    title: "A.C. Rooms",
+    desc: "Climate-controlled comfort in all rooms and suites regardless of the season.",
+    className: "bento-wide"
   }
 ];
 
@@ -87,7 +73,7 @@ export default function Amenities() {
           <span className="section-subtitle">Exquisite Facilities</span>
           <h2 className="section-title">Resort <span>Amenities</span></h2>
           <p className="section-desc">
-            Indulge in modern comforts specifically designed to make your Himalayan experience absolute bliss.
+            Indulge in modern comforts specifically designed to make your Kanha jungle experience absolute bliss.
           </p>
         </div>
 

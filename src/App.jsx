@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Rooms from './components/Rooms';
-import Gallery from './components/Gallery';
-import Dining from './components/Dining';
-import Amenities from './components/Amenities';
-import Experiences from './components/Experiences';
-import SpecialOffers from './components/SpecialOffers';
-import BookingWizard from './components/BookingWizard';
-import Reviews from './components/Reviews';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import FloatingUI from './components/FloatingUI';
 
-export default function App() {
+// Pages
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import DiscoverKanhaPage from './pages/DiscoverKanhaPage';
+import RoomsPage from './pages/RoomsPage';
+import AmenitiesPage from './pages/AmenitiesPage';
+import TariffPage from './pages/TariffPage';
+import ContactPage from './pages/ContactPage';
+
+function AppContent() {
+  const navigate = useNavigate();
   const [bookingData, setBookingData] = useState({
     checkIn: '',
     checkOut: '',
@@ -30,7 +28,7 @@ export default function App() {
       checkOut: data.checkOut,
       guests: data.guests
     }));
-    scrollToSection('booking');
+    navigate('/tariff');
   };
 
   const handleBookRoom = (roomId) => {
@@ -38,37 +36,34 @@ export default function App() {
       ...prev,
       roomId: roomId
     }));
-    scrollToSection('booking');
+    navigate('/tariff');
   };
 
   const handleNavBookClick = () => {
-    scrollToSection('booking');
-  };
-
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate('/tariff');
   };
 
   return (
     <>
-      <FloatingUI />
       <Navbar onBookClick={handleNavBookClick} />
-      <Hero onSearchBooking={handleHeroSearch} />
-      <About />
-      <Rooms onBookRoom={handleBookRoom} />
-      <Gallery />
-      <Dining />
-      <Amenities />
-      <Experiences />
-      <SpecialOffers />
-      <BookingWizard initialData={bookingData} />
-      <Reviews />
-      <FAQ />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<HomePage onSearchBooking={handleHeroSearch} />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/discover-kanha" element={<DiscoverKanhaPage />} />
+        <Route path="/rooms" element={<RoomsPage onBookRoom={handleBookRoom} />} />
+        <Route path="/amenities" element={<AmenitiesPage />} />
+        <Route path="/tariff" element={<TariffPage initialData={bookingData} />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
       <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }

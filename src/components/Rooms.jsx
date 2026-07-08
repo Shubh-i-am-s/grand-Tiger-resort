@@ -5,100 +5,68 @@ import './Rooms.css';
 
 const rooms = [
   {
-    id: 'deluxe',
-    name: "Deluxe Mountain Room",
+    id: 'luxury-room',
+    name: "A.C Luxury Room",
     category: "rooms",
     images: [
       "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80"
     ],
-    price: 3500,
-    size: "280 sq.ft.",
-    occupancy: "2 Adults",
-    view: "Valley View",
+    price: 4500,
+    size: "320 sq.ft.",
+    occupancy: "2 Adults + 1 Child",
+    view: "Forest View",
     rating: 4.8,
-    desc: "A warm and inviting space detailed with local Himachali cedar wood elements and modern comforts.",
-    amenities: ["Wi-Fi", "HD TV", "Coffee Maker", "Air Conditioning", "24/7 Room Service", "Private Balcony"]
+    desc: "Comfort meets wilderness. Elegant A.C. rooms equipped with all modern amenities for a mesmerizing jungle stay.",
+    amenities: ["Wi-Fi", "Air Conditioning", "HD TV", "Coffee Maker", "24/7 Room Service", "Private Balcony"]
   },
   {
-    id: 'premium',
-    name: "Premium Mountain View",
+    id: 'bamboo-room',
+    name: "A.C Bamboo Room",
     category: "rooms",
     images: [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
     ],
-    price: 4800,
-    size: "360 sq.ft.",
-    occupancy: "2 Adults + 1 Child",
-    view: "Mountain Panorama",
+    price: 3800,
+    size: "300 sq.ft.",
+    occupancy: "2 Adults",
+    view: "Garden View",
     rating: 4.9,
-    desc: "Immerse yourself in spectacular views of the snow-capped Dhauladhar peaks from your private viewing terrace.",
-    amenities: ["Wi-Fi", "Satellite TV", "Minibar", "Espresso Machine", "Premium Linens", "Private Viewing Balcony"]
-  },
-  {
-    id: 'suite',
-    name: "Executive Suite",
-    category: "suites",
-    images: [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80"
-    ],
-    price: 6500,
-    size: "520 sq.ft.",
-    occupancy: "4 Adults",
-    view: "Forest View",
-    rating: 4.9,
-    desc: "The perfect balance of space and comfort. Features a separate lounge area, master bedroom, and deluxe bathroom.",
-    amenities: ["Wi-Fi", "2 HD TVs", "Fully Stocked Minibar", "Espresso Machine", "Deep Soaking Tub", "Spacious Lounge Area"]
+    desc: "Rustic charm with modern comfort. Enjoy the unique eco-friendly architecture perfectly blended with the jungle theme.",
+    amenities: ["Wi-Fi", "Air Conditioning", "Eco-friendly bath amenities", "Sit-out Area", "Premium Linens"]
   },
   {
     id: 'family-suite',
-    name: "Grand Family Suite",
+    name: "Family Jungle Suite",
     category: "suites",
     images: [
       "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80"
     ],
-    price: 8200,
-    size: "680 sq.ft.",
-    occupancy: "4 Adults + 2 Kids",
-    view: "Mountain & Valley View",
-    rating: 5.0,
-    desc: "Designed for families seeking ultimate closeness. Interconnected rooms with separate dining spaces and balconies.",
-    amenities: ["Wi-Fi", "3 HD TVs", "Microwave & Dining", "Minibar", "Private Play Area", "Double Balcony"]
+    price: 6500,
+    size: "600 sq.ft.",
+    occupancy: "4 Adults",
+    view: "Pool & Jungle View",
+    rating: 4.9,
+    desc: "Spacious inter-connected suite ideal for families wanting to experience the thrill of Kanha together.",
+    amenities: ["Wi-Fi", "2 HD TVs", "Living Area", "Minibar", "Private Balcony", "Bathtub"]
   },
   {
-    id: 'honeymoon-villa',
-    name: "Honeymoon Sanctuary Villa",
-    category: "villas",
-    images: [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80"
-    ],
-    price: 11500,
-    size: "850 sq.ft.",
-    occupancy: "2 Adults",
-    view: "Infinity Sunset View",
-    rating: 5.0,
-    desc: "Romantic timber villa complete with a cozy brick fireplace, outdoor hot tub, and private stargazing terrace.",
-    amenities: ["Wi-Fi", "Bang & Olufsen Sound", "Outdoor Hot Tub", "Fireplace", "Stargazing Deck", "Butler on Call"]
-  },
-  {
-    id: 'pool-villa',
-    name: "Private Plunge Pool Villa",
+    id: 'premium-villa',
+    name: "Tiger Reserve Premium Villa",
     category: "villas",
     images: [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80"
     ],
-    price: 15000,
-    size: "1200 sq.ft.",
-    occupancy: "4 Adults",
-    view: "Infinity Dhauladhars",
+    price: 9500,
+    size: "850 sq.ft.",
+    occupancy: "2 Adults",
+    view: "Core Forest View",
     rating: 5.0,
-    desc: "An unmatched luxury compound. Features a private heated plunge pool, massive sun lounge, and round-the-clock personal butler service.",
-    amenities: ["Wi-Fi", "Private Plunge Pool", "Home Theatre System", "Kitchenette", "Sun Lounge Deck", "24/7 Butler Service"]
+    desc: "Ultimate luxury and privacy right on the edge of the buffer zone. Features a private plunge pool and open-air shower.",
+    amenities: ["Wi-Fi", "Private Plunge Pool", "Open-air Shower", "Butler Service", "Sun Deck", "Premium Safari Gear"]
   }
 ];
 

@@ -4,12 +4,12 @@ import { Calendar, Users, Check, BadgePercent, Printer, RotateCcw } from 'lucide
 import './BookingWizard.css';
 
 const roomsList = [
-  { id: 'deluxe', name: 'Deluxe Mountain Room', price: 3500, image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80" },
-  { id: 'premium', name: 'Premium Mountain View', price: 4800, image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" },
-  { id: 'suite', name: 'Executive Suite', price: 6500, image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" },
-  { id: 'family-suite', name: 'Grand Family Suite', price: 8200, image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80" },
-  { id: 'honeymoon-villa', name: 'Honeymoon Sanctuary Villa', price: 11500, image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" },
-  { id: 'pool-villa', name: 'Private Plunge Pool Villa', price: 15000, image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" }
+  { id: 'luxury-cp', name: 'A.C Luxury Room (CP)', price: 5000, image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80" },
+  { id: 'luxury-ap', name: 'A.C Luxury Room (AP)', price: 7000, image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80" },
+  { id: 'luxury-jp', name: 'A.C Luxury Room (JP Safari)', price: 24000, image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80" },
+  { id: 'bamboo-cp', name: 'A.C Bamboo Room (CP)', price: 5500, image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" },
+  { id: 'bamboo-ap', name: 'A.C Bamboo Room (AP)', price: 7500, image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" },
+  { id: 'bamboo-jp', name: 'A.C Bamboo Room (JP Safari)', price: 25000, image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" }
 ];
 
 export default function BookingWizard({ initialData = {} }) {
@@ -19,7 +19,7 @@ export default function BookingWizard({ initialData = {} }) {
   const [checkIn, setCheckIn] = useState(initialData.checkIn || '');
   const [checkOut, setCheckOut] = useState(initialData.checkOut || '');
   const [guests, setGuests] = useState(initialData.guests || '2');
-  const [selectedRoomId, setSelectedRoomId] = useState(initialData.roomId || 'deluxe');
+  const [selectedRoomId, setSelectedRoomId] = useState(initialData.roomId || 'luxury-cp');
 
   // Guest Info
   const [guestDetails, setGuestDetails] = useState({
@@ -73,7 +73,7 @@ export default function BookingWizard({ initialData = {} }) {
 
   const handleConfirmReservation = () => {
     const randomVal = Math.floor(1000 + Math.random() * 9000);
-    setBookingId(`DJR-2026-${randomVal}`);
+    setBookingId(`GTR-2026-${randomVal}`);
     setStep(4);
   };
 
@@ -351,8 +351,8 @@ export default function BookingWizard({ initialData = {} }) {
               <div className="reservation-voucher" id="resort-voucher-doc">
                 <div className="voucher-head">
                   <div>
-                    <h4>DEE JAY RESORT</h4>
-                    <p>Dhaliara, Tehsil Dehra, Kangra, HP - 177103</p>
+                    <h4>GRAND TIGER RESORT</h4>
+                    <p>Near Mukki Gate, Village: Manjitola, Kanha National Park, Balaghat, MP - 481111</p>
                   </div>
                   <div className="voucher-id-block">
                     <span>ID Reference:</span>

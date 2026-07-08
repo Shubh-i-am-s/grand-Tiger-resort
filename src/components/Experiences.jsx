@@ -5,39 +5,34 @@ import './Experiences.css';
 
 const experiences = [
   {
-    title: "Guided Nature Walk",
-    img: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=600&q=80",
-    desc: "Wander through aromatic pine woodlands with our local botanist guide.",
-    time: "Morning | 2 Hours"
+    title: "Kanha Jungle Safari",
+    img: "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=600&q=80",
+    desc: "Embark on a thrilling open-jeep safari to spot Royal Bengal Tigers and Barasinghas.",
+    time: "Morning & Evening"
   },
+
   {
-    title: "Adventure Zip-lining",
-    img: "https://images.unsplash.com/photo-1533240332313-0db49b439ad3?auto=format&fit=crop&w=600&q=80",
-    desc: "Feel the rush flying over Shivalik woodlands on a 300m zip line.",
-    time: "Afternoon | 1 Hour"
-  },
-  {
-    title: "Candle Light Dining",
+    title: "Nature & Bird Watching",
     img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
-    desc: "Savor a customized multi-cuisine menu under warm starlight by the pool.",
-    time: "Evening | Booking Required"
+    desc: "Explore the 3-acre lush resort grounds spotting native birds and flora.",
+    time: "Early Morning"
   },
   {
-    title: "Mountain Ridge Trekking",
+    title: "Wildlife Photography",
     img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-    desc: "Hike the ancient shepherds' path for panoramic views of Kangra Valley.",
-    time: "Full Day | Challenging"
+    desc: "Guided photography sessions in the core and buffer zones of Kanha.",
+    time: "Full Day | On Request"
   },
   {
-    title: "Pine Firepit Bonfires",
+    title: "Evening Bonfire",
     img: "https://images.unsplash.com/photo-1526491109672-74740652b963?auto=format&fit=crop&w=600&q=80",
-    desc: "Exchange travel stories around roasting pine-wood logs with mocktails.",
+    desc: "Share wildlife sightings around a cozy campfire under the starry jungle sky.",
     time: "Nightly | 7:00 PM"
   },
   {
-    title: "Acoustic Live Music",
+    title: "Tribal Folk Dance",
     img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
-    desc: "Listen to soft classical guitar tunes curated by regional artists.",
+    desc: "Enjoy traditional tribal dance performances celebrating the spirit of the forest.",
     time: "Weekends | Dinner Hour"
   }
 ];

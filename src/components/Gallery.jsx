@@ -7,50 +7,50 @@ const galleryData = [
   {
     id: 1,
     category: "rooms",
-    title: "Executive Suite Bed",
-    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 2,
-    category: "pool",
-    title: "Infinity Sky Pool",
-    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80"
+    title: "Luxury Room",
+    image: "/WhatsApp Image 2026-07-08 at 18.07.15.jpeg"
   },
   {
     id: 3,
     category: "restaurant",
-    title: "Shivalik dining table",
-    image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80"
+    title: "Dining Area",
+    image: "/WhatsApp Image 2026-07-08 at 18.07.42.jpeg"
   },
   {
     id: 4,
-    category: "nature",
-    title: "Scenic Valley Sunrise",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+    category: "pool",
+    title: "Resort Pool",
+    image: "/WhatsApp Image 2026-07-08 at 18.08.01.jpeg"
   },
   {
     id: 5,
     category: "events",
-    title: "Sunset Wedding Venue",
-    image: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 6,
-    category: "spa",
-    title: "Himalayan Herbal Spa",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
+    title: "Celebration Venue",
+    image: "/WhatsApp Image 2026-07-08 at 18.12.46.jpeg"
   },
   {
     id: 7,
     category: "rooms",
-    title: "Honeymoon Villa Deck",
-    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80"
+    title: "Jungle Suite",
+    image: "/WhatsApp Image 2026-07-08 at 18.13.10.jpeg"
   },
   {
     id: 8,
+    category: "nature",
+    title: "Lush Outdoors",
+    image: "/WhatsApp Image 2026-07-08 at 18.13.21.jpeg"
+  },
+  {
+    id: 9,
+    category: "restaurant",
+    title: "Fine Dining",
+    image: "/WhatsApp Image 2026-07-08 at 18.13.34.jpeg"
+  },
+  {
+    id: 10,
     category: "pool",
-    title: "Heated Plunge Pool",
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80"
+    title: "Evening Views",
+    image: "/WhatsApp Image 2026-07-08 at 18.13.48.jpeg"
   }
 ];
 
@@ -58,8 +58,8 @@ export default function Gallery() {
   const [filter, setFilter] = useState('all');
   const [lightboxImage, setLightboxImage] = useState(null);
 
-  const filteredItems = filter === 'all' 
-    ? galleryData 
+  const filteredItems = filter === 'all'
+    ? galleryData
     : galleryData.filter(item => item.category === filter);
 
   const categories = [
@@ -97,7 +97,7 @@ export default function Gallery() {
         </div>
 
         {/* Masonry Grid */}
-        <motion.div 
+        <motion.div
           className="gallery-masonry"
           layout
         >
@@ -128,7 +128,7 @@ export default function Gallery() {
       {/* Lightbox Modal */}
       <AnimatePresence>
         {lightboxImage && (
-          <motion.div 
+          <motion.div
             className="lightbox-overlay flex-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -138,7 +138,7 @@ export default function Gallery() {
             <button className="lightbox-close clickable" onClick={() => setLightboxImage(null)}>
               <X size={32} />
             </button>
-            <motion.div 
+            <motion.div
               className="lightbox-image-box"
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}

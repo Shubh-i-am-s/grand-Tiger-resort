@@ -31,38 +31,38 @@ export default function About() {
           {/* Storytelling Text */}
           <div className="about-text-panel">
             <motion.span className="section-subtitle" variants={itemVariants}>
-              Heritage & Serenity
+              Wilderness & Comfort
             </motion.span>
             <motion.h2 className="section-title left" variants={itemVariants}>
-              Our Story. Inspired by <span>Himachal’s Pure Soul</span>.
+              A Luxury Jungle Stay Near <span>Mukki Gate, Kanha</span>.
             </motion.h2>
             
             <motion.p className="about-narrative-lead" variants={itemVariants}>
-              Perched peacefully at the foothills of Shivalik and framed by the epic snow-clad Dhauladhar peaks, Dee Jay Resort is a sanctuary for the modern traveler.
+              Located just 1.1 km from the renowned Mukki Gate of Kanha National Park, Grand Tiger Resort offers an immersive wildlife stay experience for nature enthusiasts and jungle lovers.
             </motion.p>
             
             <motion.p className="about-narrative-text" variants={itemVariants}>
-              Located in Dhaliara near India's famous heritage village of Pragpur, our resort bridges rich Himachali architecture with contemporary hospitality. Every space is handcrafted to invoke natural peace, starting from our locally-sourced slate ceilings to customized wood carvings.
+              Spanning over 3 acres of serene landscape, the resort is surrounded by dense Sal and Bamboo forests, setting the perfect atmosphere for a tranquil yet adventurous getaway. Inaugurated in 2012, we provide luxurious accommodation equipped with modern amenities while maintaining a captivating jungle theme.
             </motion.p>
 
             <motion.p className="about-narrative-text" variants={itemVariants}>
-              Whether visiting the holy shrines of Chintpurni, strolling through cobblestone heritage roads, or simply relaxing in our infinity pool overlooking the Beas River reservoir, we promise a stay of absolute restoration.
+              Whether you are relaxing with a cup of coffee amidst the forest or embarking on a thrilling Kanha wildlife safari, the jungle is never too far away. Listen to the calls of the wild as you enjoy a sumptuous dinner from our multi-cuisine restaurant.
             </motion.p>
 
             {/* Quick stats counter blocks */}
             <motion.div className="about-achievements" variants={itemVariants}>
               <div className="achievement-block">
-                <div className="achievement-icon-circle"><Award size={20} /></div>
+                <div className="achievement-icon-circle"><Shield size={20} /></div>
                 <div>
-                  <h5>Excellence Winner</h5>
-                  <p>Himachal State Tourism Award</p>
+                  <h5>Premium Lodge</h5>
+                  <p>Kanha Tiger Reserve</p>
                 </div>
               </div>
               <div className="achievement-block">
                 <div className="achievement-icon-circle"><Heart size={20} /></div>
                 <div>
-                  <h5>98.6% Guest Love</h5>
-                  <p>Highest rated lodge in Kangra valley</p>
+                  <h5>10+ Years</h5>
+                  <p>Trusted hospitality since 2012</p>
                 </div>
               </div>
             </motion.div>
@@ -80,8 +80,8 @@ export default function About() {
               {/* Main Image */}
               <div className="about-img-frame main-frame">
                 <img 
-                  src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80" 
-                  alt="Dee Jay Mountain Lodge" 
+                  src="/WhatsApp Image 2026-07-08 at 18.13.21.jpeg" 
+                  alt="Grand Tiger Resort Jungle" 
                 />
               </div>
 
@@ -92,8 +92,8 @@ export default function About() {
                 whileHover={{ y: 0, transition: { duration: 0.3 } }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" 
-                  alt="Scenic Pool Overlook" 
+                  src="/WhatsApp Image 2026-07-08 at 18.07.42.jpeg" 
+                  alt="Scenic Jungle Overlook" 
                 />
               </motion.div>
 
@@ -108,8 +108,8 @@ export default function About() {
                 <div className="stamp-ring">
                   <Compass size={24} className="stamp-icon" />
                   <div>
-                    <h4>14+ Years</h4>
-                    <p>Himalayan Sanctuary</p>
+                    <h4>1.1 KM</h4>
+                    <p>From Mukki Gate</p>
                   </div>
                 </div>
               </motion.div>

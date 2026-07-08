@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, Check, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
@@ -25,7 +26,7 @@ export default function Footer() {
         <div className="footer-newsletter-row glass-panel">
           <div className="newsletter-intro text-left">
             <h3 className="news-heading">Subscribe for Exclusive Invites</h3>
-            <p className="news-sub">Receive seasonal rates, custom package guides, and Dhauladhar trekking invites.</p>
+            <p className="news-sub">Receive seasonal rates, custom package guides, and Kanha safari invites.</p>
           </div>
 
           <div className="newsletter-form-container">
@@ -64,12 +65,15 @@ export default function Footer() {
         <div className="footer-links-grid">
           {/* Brand info */}
           <div className="footer-brand-summary">
-            <h3 className="footer-signature">
-              <span className="logo-main">DEE JAY</span>
-              <span className="logo-sub">RESORT</span>
+            <h3 className="footer-signature" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <img src="http://www.grandtigerresort.com/images/main-logo.png" alt="Grand Tiger Resort Logo" style={{ height: '30px' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
+                <span className="logo-main" style={{ fontSize: '1.2rem', letterSpacing: '1px' }}>GRAND TIGER</span>
+                <span className="logo-sub">RESORT KANHA</span>
+              </div>
             </h3>
             <p className="brand-summary-text">
-              A premium mountain sanctuary nestling in the foothills of Shivalik, Himachal Pradesh. Handcrafted comfort designed for luxury rest.
+              A premium jungle sanctuary nestled in the heart of Kanha National Park. Comfort meets wilderness for an unforgettable luxury experience.
             </p>
             <div className="footer-social-icons">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="clickable" aria-label="Facebook">
@@ -96,22 +100,24 @@ export default function Footer() {
           <div className="footer-links-column">
             <h4>Quick Navigation</h4>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Story</a></li>
-              <li><a href="#rooms">Suites & Rooms</a></li>
-              <li><a href="#dining">Chef Gastronomy</a></li>
-              <li><a href="#gallery">Masonry Gallery</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/rooms">Accommodations</Link></li>
+              <li><Link to="/discover-kanha">Discover Kanha</Link></li>
+              <li><Link to="/amenities">Amenities</Link></li>
+              <li><Link to="/tariff">Tariff</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
           {/* Sights */}
           <div className="footer-links-column">
-            <h4>Himalayan Attractions</h4>
+            <h4>Kanha Attractions</h4>
             <ul>
-              <li><a href="#attractions">Pragpur Heritage Village</a></li>
-              <li><a href="#attractions">Chintpurni Shakti Peeth</a></li>
-              <li><a href="#attractions">Beas River & Pong Dam</a></li>
-              <li><a href="#attractions">Historic Kangra Fort</a></li>
+              <li><Link to="/discover-kanha">Kanha Tiger Reserve</Link></li>
+              <li><Link to="/discover-kanha">Mukki Gate</Link></li>
+              <li><Link to="/discover-kanha">Jungle Safari</Link></li>
+              <li><Link to="/discover-kanha">Nature Walks</Link></li>
             </ul>
           </div>
 
@@ -119,24 +125,24 @@ export default function Footer() {
           <div className="footer-links-column">
             <h4>Inquiry Desk</h4>
             <p className="footer-address-txt">
-              Chandigarh-Dharamshala Highway, Dhaliara, Tehsil Dehra, Kangra, HP - 177103
+              Near Mukki Gate, Village: Manjitola, Kanha National Park, Baihar, District: Balaghat, Madhya Pradesh 481111, India
             </p>
             <p className="footer-contact-row">
-              <strong>Phone:</strong> +91 94181 03888
+              <strong>Phone:</strong> +91 8889502888
             </p>
             <p className="footer-contact-row">
-              <strong>Email:</strong> reservations@deejayresort.com
+              <strong>Email:</strong> grandtigerresort@gmail.com
             </p>
           </div>
         </div>
 
         {/* Copy bar */}
         <div className="footer-bottom-copy-row">
-          <p>&copy; {new Date().getFullYear()} Dee Jay Resort. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Grand Tiger Resort. All Rights Reserved.</p>
           <div className="footer-bottom-tags">
-            <a href="#privacy">Privacy Statement</a>
+            <Link to="/contact">Privacy Statement</Link>
             <span className="dot-divider"></span>
-            <a href="#terms">Terms & Conditions</a>
+            <Link to="/contact">Terms & Conditions</Link>
           </div>
         </div>
       </div>

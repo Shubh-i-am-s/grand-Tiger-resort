@@ -185,22 +185,22 @@ textarea {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 32px;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1.5rem;
+    padding: 0 16px;
   }
 }
 
 .section-padding {
-  padding: 9rem 0;
+  padding: 96px 0;
 }
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: 6rem 0;
+    padding: 64px 0;
   }
 }
 
@@ -358,23 +358,6 @@ textarea {
   letter-spacing: 0.1em;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--secondary);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
-}
 
 /* Scroll Progress Bar at the top of the body */
 .scroll-progress-container {

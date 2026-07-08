@@ -201,17 +201,31 @@
 .contact-inquiry-form {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
 }
 
 .form-heading-title {
   font-size: 1.85rem;
-  margin-bottom: 2rem;
+  margin-bottom: 8px;
   color: var(--primary);
 }
 
 .contact-send-btn {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 16px;
 }
 
 /* Success layout */

@@ -5,15 +5,19 @@ import './FloatingUI.css';
 
 export default function FloatingUI() {
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!sessionStorage.getItem('hasLoadedBefore'));
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    // Hide loader after 2.5 seconds
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2500);
+    // Hide loader after 2.5 seconds if not loaded before
+    let timer;
+    if (!sessionStorage.getItem('hasLoadedBefore')) {
+      timer = setTimeout(() => {
+        setLoading(false);
+        sessionStorage.setItem('hasLoadedBefore', 'true');
+      }, 2500);
+    }
 
     const handleScroll = () => {
       if (window.scrollY > 400) {
@@ -57,7 +61,7 @@ export default function FloatingUI() {
     document.addEventListener('mouseover', handleMouseOver);
 
     return () => {
-      clearTimeout(timer);
+      if (timer) clearTimeout(timer);
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseover', handleMouseOver);
@@ -97,8 +101,8 @@ export default function FloatingUI() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: 'easeOut' }}
             >
-              <h2 className="loader-title">DEE JAY</h2>
-              <span className="loader-subtitle">RESORT</span>
+              <h2 className="loader-title">GRAND TIGER</h2>
+              <span className="loader-subtitle">RESORT KANHA</span>
               <div className="loader-line-indicator">
                 <motion.div 
                   className="loader-progress"
@@ -107,7 +111,7 @@ export default function FloatingUI() {
                   transition={{ duration: 2, ease: 'easeInOut' }}
                 />
               </div>
-              <p className="loader-tag">Inspired by Natural Beauty & Culture</p>
+              <p className="loader-tag">Where Luxury Meets Wilderness</p>
             </motion.div>
           </motion.div>
         )}
@@ -117,7 +121,7 @@ export default function FloatingUI() {
       <div className="floating-action-controls">
         {/* WhatsApp Button */}
         <a 
-          href="https://wa.me/919418103888?text=Hello%20Dee%20Jay%20Resort,%20I'd%20like%20to%20inquire%20about%20staying%20packages."
+          href="https://wa.me/918889502888?text=Hello%20Grand%20Tiger%20Resort,%20I'd%20like%20to%20inquire%20about%20staying%20packages."
           target="_blank" 
           rel="noopener noreferrer"
           className="floating-btn whatsapp-btn glass-panel"

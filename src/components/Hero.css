@@ -26,6 +26,11 @@
   height: 100%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .hero-content-container {

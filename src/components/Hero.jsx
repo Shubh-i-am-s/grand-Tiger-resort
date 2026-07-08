@@ -5,22 +5,22 @@ import './Hero.css';
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2400&q=100",
-    title: "Experience Sublime Mountain Luxury",
-    subtitle: "WELCOME TO DEE JAY RESORT",
-    desc: "A refreshing sanctuary nestling along the idyllic snow-clad Dhauladhar mountains in Himachal Pradesh."
+    image: "/WhatsApp Image 2026-07-08 at 18.07.15.jpeg",
+    title: "Welcome to Grand Tiger Resort",
+    subtitle: "WELCOME TO KANHA NATIONAL PARK",
+    desc: "Located just 1.1 Kms from the Mukki Gate, our resort offers a luxurious sanctuary surrounded by lush green forests of Sal and Bamboo."
   },
   {
-    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=2400&q=100",
-    title: "Luxury Mountain Lodges & Villas",
+    image: "/WhatsApp Image 2026-07-08 at 18.13.21.jpeg",
+    title: "Experience the Jungle Thrill",
+    subtitle: "AN UNFORGETTABLE WILDERNESS",
+    desc: "Indulge in elegant A.C. rooms equipped with modern amenities, creating a mesmerizing jungle theme for your perfect getaway."
+  },
+  {
+    image: "/WhatsApp Image 2026-07-08 at 18.08.01.jpeg",
+    title: "Culinary Journeys & Relaxation",
     subtitle: "THE ART OF EXQUISITE LIVING",
-    desc: "Indulge in suites detailed with local wood accents and private balconies, overlooking the green Kangra valley."
-  },
-  {
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2400&q=100",
-    title: "Culinary Journeys & Infinity Pools",
-    subtitle: "UNMATCHED PANORAMIC EXPERIENCES",
-    desc: "Savor hand-selected local flavors and European recipes prepared by our master chefs under the Himalayan sky."
+    desc: "Listen to the call of the wild whilst having a sumptuous dinner from our authentic Indian and Continental cuisine."
   }
 ];
 
@@ -50,7 +50,7 @@ export default function Hero({ onSearchBooking }) {
           <motion.div
             key={current}
             className="hero-slide-bg"
-            style={{ backgroundImage: `linear-gradient(rgba(10, 13, 11, 0.45), rgba(10, 13, 11, 0.45)), url(${slides[current].image})` }}
+            style={{ backgroundImage: `linear-gradient(rgba(10, 13, 11, 0.30), rgba(10, 13, 11, 0.55)), url("${slides[current].image}")` }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
