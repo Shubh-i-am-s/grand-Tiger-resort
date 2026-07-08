@@ -76,8 +76,8 @@ export default function Contact() {
             {/* Real Google Maps Embed */}
             <div className="interactive-map-block">
               <iframe
-                title="Grand Tiger Resort Location"
-                src="https://maps.google.com/maps?q=Grand+Tiger+Resort+Kanha+Mukki+Gate+Balaghat+Madhya+Pradesh&output=embed&z=14"
+                title="Grand Tiger Resort Location - Kanha National Park"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.1472595688936!2d80.63942607497878!3d22.245310444985085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a27c40dcfd07a07%3A0xa4e73a36c8c31f61!2sGrand%20Tiger%20Resort!5e0!3m2!1sen!2sin!4v1720450000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, display: 'block' }}

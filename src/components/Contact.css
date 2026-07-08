@@ -82,7 +82,7 @@
 
 /* Real Google Maps Embed */
 .interactive-map-block {
-  height: 320px;
+  height: 380px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-color);
@@ -95,11 +95,25 @@
   height: 100%;
   border: 0;
   display: block;
+  min-height: 380px;
+}
+
+@media (max-width: 768px) {
+  .interactive-map-block {
+    height: 300px;
+  }
+  .interactive-map-block iframe {
+    min-height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
   .interactive-map-block {
     height: 260px;
+    border-radius: var(--radius-md);
+  }
+  .interactive-map-block iframe {
+    min-height: 260px;
   }
 }
 
