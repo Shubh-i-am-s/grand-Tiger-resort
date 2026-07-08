@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Calendar, Users, ArrowRight, Play } from 'lucide-react';
 import './Hero.css';
 
@@ -107,12 +108,12 @@ export default function Hero({ onSearchBooking }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            <a href="#rooms" className="btn btn-primary clickable">
+            <Link to="/tariff" className="btn btn-primary clickable">
               Book Stay
-            </a>
-            <a href="#about" className="btn btn-outline hero-sec-btn clickable">
+            </Link>
+            <Link to="/rooms" className="btn btn-outline hero-sec-btn clickable">
               Explore Resort <Play size={10} style={{ marginLeft: 6, fill: 'currentColor' }} />
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>
