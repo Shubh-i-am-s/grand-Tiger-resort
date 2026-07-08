@@ -8,49 +8,49 @@ const galleryData = [
     id: 1,
     category: "rooms",
     title: "Luxury Room",
-    image: "/WhatsApp Image 2026-07-08 at 18.07.15.jpeg"
+    image: "/hero1.jpeg"
+  },
+  {
+    id: 2,
+    category: "nature",
+    title: "Jungle View",
+    image: "/hero2.jpeg"
   },
   {
     id: 3,
-    category: "restaurant",
-    title: "Dining Area",
-    image: "/WhatsApp Image 2026-07-08 at 18.07.42.jpeg"
+    category: "rooms",
+    title: "Bamboo Suite",
+    image: "/hero3.jpeg"
   },
   {
     id: 4,
-    category: "pool",
-    title: "Resort Pool",
-    image: "/WhatsApp Image 2026-07-08 at 18.08.01.jpeg"
+    category: "nature",
+    title: "Forest Serenity",
+    image: "/hero4.jpeg"
   },
   {
     id: 5,
-    category: "events",
-    title: "Celebration Venue",
-    image: "/WhatsApp Image 2026-07-08 at 18.12.46.jpeg"
+    category: "nature",
+    title: "Wild Kanha",
+    image: "/hero5.jpeg"
+  },
+  {
+    id: 6,
+    category: "pool",
+    title: "Resort Grounds",
+    image: "/WhatsApp Image 2026-07-08 at 18.08.01.jpeg"
   },
   {
     id: 7,
     category: "rooms",
-    title: "Jungle Suite",
+    title: "Jungle Suite Interior",
     image: "/WhatsApp Image 2026-07-08 at 18.13.10.jpeg"
   },
   {
     id: 8,
-    category: "nature",
-    title: "Lush Outdoors",
-    image: "/WhatsApp Image 2026-07-08 at 18.13.21.jpeg"
-  },
-  {
-    id: 9,
     category: "restaurant",
     title: "Fine Dining",
     image: "/WhatsApp Image 2026-07-08 at 18.13.34.jpeg"
-  },
-  {
-    id: 10,
-    category: "pool",
-    title: "Evening Views",
-    image: "/WhatsApp Image 2026-07-08 at 18.13.48.jpeg"
   }
 ];
 

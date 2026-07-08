@@ -5,22 +5,34 @@ import './Hero.css';
 
 const slides = [
   {
-    image: "/WhatsApp Image 2026-07-08 at 18.07.15.jpeg",
+    image: "/hero1.jpeg",
     title: "Welcome to Grand Tiger Resort",
     subtitle: "WELCOME TO KANHA NATIONAL PARK",
     desc: "Located just 1.1 Kms from the Mukki Gate, our resort offers a luxurious sanctuary surrounded by lush green forests of Sal and Bamboo."
   },
   {
-    image: "/WhatsApp Image 2026-07-08 at 18.13.21.jpeg",
+    image: "/hero2.jpeg",
     title: "Experience the Jungle Thrill",
     subtitle: "AN UNFORGETTABLE WILDERNESS",
     desc: "Indulge in elegant A.C. rooms equipped with modern amenities, creating a mesmerizing jungle theme for your perfect getaway."
   },
   {
-    image: "/WhatsApp Image 2026-07-08 at 18.08.01.jpeg",
+    image: "/hero3.jpeg",
     title: "Culinary Journeys & Relaxation",
     subtitle: "THE ART OF EXQUISITE LIVING",
     desc: "Listen to the call of the wild whilst having a sumptuous dinner from our authentic Indian and Continental cuisine."
+  },
+  {
+    image: "/hero4.jpeg",
+    title: "Luxury Amidst Nature",
+    subtitle: "KANHA'S FINEST JUNGLE RETREAT",
+    desc: "Wake up to birdsong and forest serenity. Our premium rooms offer the perfect blend of luxury and the untamed wilderness."
+  },
+  {
+    image: "/hero5.jpeg",
+    title: "Discover Wild Kanha",
+    subtitle: "HOME OF THE ROYAL BENGAL TIGER",
+    desc: "Step into the heart of Kanha National Park — the land of tigers, leopards, and rare wildlife set amidst pristine sal forests."
   }
 ];
 
