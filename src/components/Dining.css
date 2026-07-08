@@ -13,7 +13,13 @@
 @media (max-width: 1024px) {
   .dining-main-grid {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dining-main-grid {
+    gap: 2rem;
   }
 }
 

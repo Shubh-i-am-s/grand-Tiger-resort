@@ -4,9 +4,18 @@
   height: 100vh;
   min-height: 720px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
-  color: var(--text-light);
+  color: var(--text-light);\n}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100svh;
+    padding-top: var(--nav-height);
+  }
 }
 
 .hero-slides {
@@ -40,6 +49,15 @@
   display: flex;
   align-items: center;
   padding-bottom: 8rem;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-content-container {
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+    align-items: flex-start;
+  }
 }
 
 .hero-content {
@@ -61,16 +79,22 @@
 .hero-headline {
   color: var(--text-light);
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 6.2vw, 4.8rem);
+  font-size: clamp(2rem, 6.2vw, 4.8rem);
   font-weight: 400;
   line-height: 1.15;
   margin-bottom: 1.75rem;
   letter-spacing: -0.02em;
 }
 
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 2rem;
+  }
+}
+
 .hero-description {
   font-family: var(--font-sans);
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2.75rem;
   line-height: 1.65;
@@ -79,7 +103,8 @@
 
 .hero-buttons-row {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .hero-sec-btn {
@@ -107,6 +132,18 @@
   z-index: 10;
 }
 
+@media (max-width: 768px) {
+  .hero-booking-panel-wrapper {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem 2rem;
+  }
+}
+
 .hero-booking-panel {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr 1.2fr;
@@ -114,7 +151,7 @@
   padding: 1.5rem 2.5rem;
   border-radius: var(--radius-md) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  background: rgba(10, 13, 11, 0.6) !important; /* Fallback obsidian glass */
+  background: rgba(10, 13, 11, 0.6) !important;
 }
 
 @media (max-width: 900px) {
@@ -128,6 +165,16 @@
   }
   .hero-input-divider {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-booking-panel {
+    background: rgba(10, 13, 11, 0.85) !important;
+    border-radius: var(--radius-md) !important;
+  }
+  .hero-booking-submit {
+    width: 100%;
   }
 }
 

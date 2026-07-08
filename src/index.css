@@ -200,7 +200,13 @@ textarea {
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: 64px 0;
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-padding {
+    padding: 48px 0;
   }
 }
 
@@ -238,6 +244,14 @@ textarea {
   line-height: 1.7;
 }
 
+@media (max-width: 768px) {
+  .section-desc {
+    margin: -0.5rem auto 2.5rem;
+    font-size: 0.9375rem;
+    padding: 0 0.5rem;
+  }
+}
+
 /* Interactive Buttons */
 .btn {
   display: inline-flex;
@@ -255,6 +269,13 @@ textarea {
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.6875rem;
+  }
 }
 
 .btn-primary {

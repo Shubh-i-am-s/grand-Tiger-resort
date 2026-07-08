@@ -32,9 +32,16 @@
 /* Grid layout */
 .gallery-masonry {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
   width: 100%;
+}
+
+@media (max-width: 480px) {
+  .gallery-masonry {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
 .gallery-item {
