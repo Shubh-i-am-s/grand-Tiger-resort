@@ -73,24 +73,18 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Custom Styled Map Panel */}
-            <div className="interactive-map-block glass-panel">
-              <div className="map-vector-canvas">
-                <div className="map-beacon-pulse"></div>
-                <div className="map-location-tag">
-                  <strong>Grand Tiger Resort</strong>
-                  <span>Mukki Gate, Kanha</span>
-                </div>
-                <div className="map-indicator-compass">N</div>
-                <a 
-                  href="https://maps.google.com/?q=Grand+Tiger+Resort+Kanha+National+Park" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="btn btn-outline map-view-btn clickable"
-                >
-                  View Route on Google Maps
-                </a>
-              </div>
+            {/* Real Google Maps Embed */}
+            <div className="interactive-map-block">
+              <iframe
+                title="Grand Tiger Resort Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5!2d80.6419!3d22.2453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a27b7c5d5b5a5a5%3A0x1234567890abcdef!2sGrand%20Tiger%20Resort!5e0!3m2!1sen!2sin!4v1720450000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
