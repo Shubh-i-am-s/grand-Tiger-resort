@@ -410,11 +410,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .voucher-head {
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .voucher-id-block {
+    text-align: left;
+  }
 }
 
 .voucher-head h4 {
   color: var(--text-light);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
 }
@@ -443,6 +456,12 @@
 
 .voucher-main {
   padding: 2.5rem;
+}
+
+@media (max-width: 480px) {
+  .voucher-main {
+    padding: 1.25rem;
+  }
 }
 
 .voucher-details-grid {
@@ -496,6 +515,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .voucher-bottom-price h3 {
@@ -536,6 +557,20 @@
 .voucher-actions-row {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .voucher-actions-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .voucher-actions-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Print vouchers */
